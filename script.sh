@@ -14,9 +14,10 @@ do
 	export HEADER=$header
 	echo "RESULT: $url"
 	result=`npm test`
-	resultstring=`echo $result | cut -d: -f4-99 | cut -d' ' -f2-99`
-	echo $resultstring
-	echo "................."
+	echo $result
+	#resultstring=`echo $result | cut -d: -f4-99 | cut -d' ' -f2-99`
+	#echo $resultstring
+	#echo "................."
 	unset URL
 	unset TITLE
 	unset HEADER

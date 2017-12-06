@@ -47,7 +47,7 @@ describe('test suite for ' + testURL, function () {
 	expect(ThisPage.footerDiv.getText()).to.include(ThisPage.phoneNumberString);
 	expect(ThisPage.footerDiv.getText()).to.include(ThisPage.emailAddressString);
 	expect(ThisPage.footerDiv.getText()).to.include(ThisPage.addressString);
-	expect(ThisPage.header.getText()).to.equal(header);
+	// expect(ThisPage.header.getText()).to.equal(header);
 	expect(ThisPage.post_footer).to.exist;
     });
 
@@ -56,7 +56,7 @@ describe('test suite for ' + testURL, function () {
 	expect(ThisPage.nav_home_link).to.equal('http://www.boisestate.edu/');
     });
 
-    it('should check the title', function () {
+    it.skip('should check the title', function () {
         expect(ThisPage.title).to.equal(title);
     });
 
