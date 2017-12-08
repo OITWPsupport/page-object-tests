@@ -2,7 +2,6 @@ var expect = require('chai').expect;
 
 var site = process.env.SITE;
 var pageObject = '../pageobjects/' + site + '.page';
-// var ThisPage = require('../../../pageobjects/oit.page');
 var ThisPage = require(pageObject);
 
 //
@@ -14,15 +13,19 @@ var title = process.env.TITLE;
 var header = process.env.HEADER;
 
 describe('test suite for ' + testURL, function () {
-    it('should load the page in under 7 seconds', function () {
-	var path = testURL.substring(testURL.indexOf('.edu/')+4);
-        var startTimestamp = new Date().getTime();
-        ThisPage.open(path);
-	ThisPage.footerDiv.waitForVisible();
-        var endTimestamp = new Date().getTime();
-        var pageLoadTime = (endTimestamp-startTimestamp);
-        console.log('It took ' + pageLoadTime + ' ms to load the page.');
-	expect(pageLoadTime).to.be.below(7000);
+
+    var path = testURL.substring(testURL.indexOf('.edu/')+4);
+    ThisPage.open(path);
+
+    it.skip('should load the page in under 7 seconds', function () {
+	// var path = testURL.substring(testURL.indexOf('.edu/')+4);
+        // var startTimestamp = new Date().getTime();
+        // ThisPage.open(path);
+	// ThisPage.footerDiv.waitForVisible();
+        // var endTimestamp = new Date().getTime();
+        // var pageLoadTime = (endTimestamp-startTimestamp);
+        // console.log('It took ' + pageLoadTime + ' ms to load the page.');
+	// expect(pageLoadTime).to.be.below(7000);
     });
 
     it('should verify the URL', function () {
@@ -47,16 +50,18 @@ describe('test suite for ' + testURL, function () {
 	expect(ThisPage.footerDiv.getText()).to.include(ThisPage.phoneNumberString);
 	expect(ThisPage.footerDiv.getText()).to.include(ThisPage.emailAddressString);
 	expect(ThisPage.footerDiv.getText()).to.include(ThisPage.addressString);
-	// expect(ThisPage.header.getText()).to.equal(header);
+	expect(ThisPage.header.getText()).to.equal(header);
+	expect(ThisPage.header.getText()).to.not.equal('The page you requested could not be found.');
+	console.log(testURL);
+	console.log(ThisPage.header.getText());
 	expect(ThisPage.post_footer).to.exist;
     });
 
     it('should check for the navigation back to www.boisestate.edu', function () {
-	expect(ThisPage.nav_home).to.exist;
 	expect(ThisPage.nav_home_link).to.equal('http://www.boisestate.edu/');
     });
 
-    it.skip('should check the title', function () {
+    it('should check the title', function () {
         expect(ThisPage.title).to.equal(title);
     });
 

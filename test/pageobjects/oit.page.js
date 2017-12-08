@@ -18,7 +18,6 @@ var oitPage = Object.create(page, {
 	header: { get: function () { return $('.entry-title'); } },
 	post_footer: { get: function () { return browser.isExisting('#fw-mega-menu'); } },
 	mega_menu_text: { get: function () { return browser.getText("#fw-mega-menu"); } },
-	nav_home: { get: function () { return browser.isExisting('#breadcrumb_wrap .nav_home'); } },
 	nav_home_link: { get: function () { return browser.getAttribute('#breadcrumb_wrap .nav_home', 'href'); } },
 	currentURL: { get: function () { return browser.getUrl(); } },
 	search_field: { get: function () { return browser.isExisting('#q'); } },
