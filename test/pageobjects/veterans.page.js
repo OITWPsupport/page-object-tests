@@ -1,6 +1,6 @@
 var page = require('./page');
 
-var oitPage = Object.create(page, {
+var veteransPage = Object.create(page, {
 
 
 
