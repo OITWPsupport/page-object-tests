@@ -1,0 +1,23 @@
+
+[36m․[0m[32m․[0m[32m․[0m[32m․[0m[31mF[0m[32m․[0m[31mF[0m[32m․[0m
+
+[32m5 passing[0m[90m (18.90s)[0m
+[36m1 skipped[0m
+[31m2 failing[0m
+
+[0m1) test suite for https://alumni.boisestate.edu/50-years/social/ should read the value of footer:
+[0m[31mAn element could not be located on the page using the given search parameters (".entry-title").[0m[93m
+running chrome[0m[90m
+Error: An element could not be located on the page using the given search parameters (".entry-title").
+    at getText() - index.js:312:3
+[0m
+[0m2) test suite for https://alumni.boisestate.edu/50-years/social/ should check the title:
+[0m[31mexpected 'Page not found - Alumni' to equal '#BoiseStateAlumni Social Media - Alumni'[0m[93m
+running chrome[0m[90m
+AssertionError: expected 'Page not found - Alumni' to equal '#BoiseStateAlumni Social Media - Alumni'
+    at Context.<anonymous> (/Users/david/temp/20180105/page-object-tests/test/specs/var.spec.js:65:35)
+    at new Promise (<anonymous>)
+    at new F (/usr/local/lib/node_modules/wdio-mocha-framework/node_modules/core-js/library/modules/_export.js:35:28)
+[0m
+
+

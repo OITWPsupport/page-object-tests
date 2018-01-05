@@ -1,0 +1,17 @@
+
+[36m․[0m[32m․[0m[32m․[0m[32m․[0m[31mF[0m[32m․[0m[32m․[0m[32m․[0m
+
+[32m6 passing[0m[90m (7.10s)[0m
+[36m1 skipped[0m
+[31m1 failing[0m
+
+[0m1) test suite for https://webguide.boisestate.edu/ should read the value of footer:
+[0m[31mexpected 'COMMUNICATIONS AND MARKETING - UNIVERSITY WEB    |    WEBTEAM@BOISESTATE.EDU    |    (208) 426-1577    |    ALUMNI AND FRIENDS CENTER' to include 'CAPITOL VILLAGE'[0m[93m
+running chrome[0m[90m
+AssertionError: expected 'COMMUNICATIONS AND MARKETING - UNIVERSITY WEB    |    WEBTEAM@BOISESTATE.EDU    |    (208) 426-1577    |    ALUMNI AND FRIENDS CENTER' to include 'CAPITOL VILLAGE'
+    at Context.<anonymous> (/Users/david/temp/20180105/page-object-tests/test/specs/var.spec.js:52:42)
+    at new Promise (<anonymous>)
+    at new F (/usr/local/lib/node_modules/wdio-mocha-framework/node_modules/core-js/library/modules/_export.js:35:28)
+[0m
+
+

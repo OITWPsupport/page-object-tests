@@ -16,16 +16,17 @@ describe('test suite for ' + testURL, function () {
 
     var path = testURL.substring(testURL.indexOf('.edu/')+4);
     ThisPage.open(path);
+    console.log('Testing ' + testURL);
 
-    it.skip('should load the page in under 7 seconds', function () {
-	// var path = testURL.substring(testURL.indexOf('.edu/')+4);
-        // var startTimestamp = new Date().getTime();
-        // ThisPage.open(path);
-	// ThisPage.footerDiv.waitForVisible();
-        // var endTimestamp = new Date().getTime();
-        // var pageLoadTime = (endTimestamp-startTimestamp);
-        // console.log('It took ' + pageLoadTime + ' ms to load the page.');
-	// expect(pageLoadTime).to.be.below(7000);
+    it('should load the page in under 7 seconds', function () {
+	var path = testURL.substring(testURL.indexOf('.edu/')+4);
+        var startTimestamp = new Date().getTime();
+        ThisPage.open(path);
+	ThisPage.footerDiv.waitForVisible();
+        var endTimestamp = new Date().getTime();
+        var pageLoadTime = (endTimestamp-startTimestamp);
+        console.log('It took ' + pageLoadTime + ' ms to load the page.');
+	expect(pageLoadTime).to.be.below(7000);
     });
 
     it('should verify the URL', function () {
@@ -52,8 +53,6 @@ describe('test suite for ' + testURL, function () {
 	expect(ThisPage.footerDiv.getText()).to.include(ThisPage.addressString);
 	expect(ThisPage.header.getText()).to.equal(header);
 	expect(ThisPage.header.getText()).to.not.equal('The page you requested could not be found.');
-	console.log(testURL);
-	console.log(ThisPage.header.getText());
 	expect(ThisPage.post_footer).to.exist;
     });
 

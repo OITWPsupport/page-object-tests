@@ -1,0 +1,69 @@
+
+Testing <A HREF="HTTPS://IBO.BOISESTATE.EDU/BLOG/CUCKOOS2017/" TITLE="YELLOW-BILLED CUCKOO SURVEY UPDATE">YELLOW-BILLED CUCKOO SURVEY UPDATE</A>
+[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m
+
+[32m0 passing[0m[90m (34.50s)[0m
+[31m8 failing[0m
+
+[0m1) test suite for <A HREF="HTTPS://IBO.BOISESTATE.EDU/BLOG/CUCKOOS2017/" TITLE="YELLOW-BILLED CUCKOO SURVEY UPDATE">YELLOW-BILLED CUCKOO SURVEY UPDATE</A> should load the page in under 7 seconds:
+[0m[31mTimeout of 30000ms exceeded. Try to reduce the run time or increase your timeout for test specs (http://webdriver.io/guide/testrunner/timeouts.html); if returning a Promise, ensure it resolves.[0m[93m
+running chrome[0m[90m
+Error: Timeout of 30000ms exceeded. Try to reduce the run time or increase your timeout for test specs (http://webdriver.io/guide/testrunner/timeouts.html); if returning a Promise, ensure it resolves.
+    at Timeout.<anonymous> (/usr/local/lib/node_modules/wdio-mocha-framework/node_modules/mocha/lib/runnable.js:238:19)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:264:5)
+[0m
+[0m2) test suite for <A HREF="HTTPS://IBO.BOISESTATE.EDU/BLOG/CUCKOOS2017/" TITLE="YELLOW-BILLED CUCKOO SURVEY UPDATE">YELLOW-BILLED CUCKOO SURVEY UPDATE</A> should verify the URL:
+[0m[31mexpected 'https://ibo.boisestate.eduhref/=%22HTTPS://IBO.BOISESTATE.EDU/BLOG/CUCKOOS2017/%22%20TITLE=%22YELLOW-BILLED%20CUCKOO%20SURVEY%20UPDATE%22%3EYELLOW-BILLED%20CUCKOO%20SURVEY%20UPDATE%3C/A%3E' to equal '<A HREF="HTTPS://IBO.BOISESTATE.EDU/BLOG/CUCKOOS2017/" TITLE="YELLOW-BILLED CUCKOO SURVEY UPDATE">YELLOW-BILLED CUCKOO SURVEY UPDATE</A>'[0m[93m
+running chrome[0m[90m
+AssertionError: expected 'https://ibo.boisestate.eduhref/=%22HTTPS://IBO.BOISESTATE.EDU/BLOG/CUCKOOS2017/%22%20TITLE=%22YELLOW-BILLED%20CUCKOO%20SURVEY%20UPDATE%22%3EYELLOW-BILLED%20CUCKOO%20SURVEY%20UPDATE%3C/A%3E' to equal '<A HREF="HTTPS://IBO.BOISESTATE.EDU/BLOG/CUCKOOS2017/" TITLE="YELLOW-BILLED CUCKOO SURVEY UPDATE">YELLOW-BILLED CUCKOO SURVEY UPDATE</A>'
+    at Context.<anonymous> (/Users/david/temp/20180105/page-object-tests/test/specs/var.spec.js:33:40)
+    at new Promise (<anonymous>)
+    at new F (/usr/local/lib/node_modules/wdio-mocha-framework/node_modules/core-js/library/modules/_export.js:35:28)
+[0m
+[0m3) test suite for <A HREF="HTTPS://IBO.BOISESTATE.EDU/BLOG/CUCKOOS2017/" TITLE="YELLOW-BILLED CUCKOO SURVEY UPDATE">YELLOW-BILLED CUCKOO SURVEY UPDATE</A> should confirm that the search controls are present and correct:
+[0m[31mAn element could not be located on the page using the given search parameters ("#search_toggle").[0m[93m
+running chrome[0m[90m
+Error: An element could not be located on the page using the given search parameters ("#search_toggle").
+    at elements("#content > div.post-footer > p") - isVisible.js:54:17
+    at isVisible("#content > div.post-footer > p") - waitForVisible.js:73:22
+[0m
+[0m4) test suite for <A HREF="HTTPS://IBO.BOISESTATE.EDU/BLOG/CUCKOOS2017/" TITLE="YELLOW-BILLED CUCKOO SURVEY UPDATE">YELLOW-BILLED CUCKOO SURVEY UPDATE</A> should confirm that the theme version is correct:
+[0m[31mAn element could not be located on the page using the given search parameters ("[name="theme-version"]").[0m[93m
+running chrome[0m[90m
+Error: An element could not be located on the page using the given search parameters ("[name="theme-version"]").
+    at elements("#content > div.post-footer > p") - isVisible.js:54:17
+    at isVisible("#content > div.post-footer > p") - waitForVisible.js:73:22
+[0m
+[0m5) test suite for <A HREF="HTTPS://IBO.BOISESTATE.EDU/BLOG/CUCKOOS2017/" TITLE="YELLOW-BILLED CUCKOO SURVEY UPDATE">YELLOW-BILLED CUCKOO SURVEY UPDATE</A> should read the value of footer:
+[0m[31mAn element could not be located on the page using the given search parameters ("#content > div.post-footer > p").[0m[93m
+running chrome[0m[90m
+Error: An element could not be located on the page using the given search parameters ("#content > div.post-footer > p").
+    at elements("#content > div.post-footer > p") - isVisible.js:54:17
+    at isVisible("#content > div.post-footer > p") - waitForVisible.js:73:22
+[0m
+[0m6) test suite for <A HREF="HTTPS://IBO.BOISESTATE.EDU/BLOG/CUCKOOS2017/" TITLE="YELLOW-BILLED CUCKOO SURVEY UPDATE">YELLOW-BILLED CUCKOO SURVEY UPDATE</A> should check for the navigation back to www.boisestate.edu:
+[0m[31mAn element could not be located on the page using the given search parameters ("#breadcrumb_wrap .nav_home").[0m[93m
+running chrome[0m[90m
+Error: An element could not be located on the page using the given search parameters ("#breadcrumb_wrap .nav_home").
+    at elements("#content > div.post-footer > p") - isVisible.js:54:17
+    at isVisible("#content > div.post-footer > p") - waitForVisible.js:73:22
+[0m
+[0m7) test suite for <A HREF="HTTPS://IBO.BOISESTATE.EDU/BLOG/CUCKOOS2017/" TITLE="YELLOW-BILLED CUCKOO SURVEY UPDATE">YELLOW-BILLED CUCKOO SURVEY UPDATE</A> should check the title:
+[0m[31mexpected 'ibo.boisestate.eduhref' to equal ''[0m[93m
+running chrome[0m[90m
+AssertionError: expected 'ibo.boisestate.eduhref' to equal ''
+    at Context.<anonymous> (/Users/david/temp/20180105/page-object-tests/test/specs/var.spec.js:64:35)
+    at new Promise (<anonymous>)
+    at new F (/usr/local/lib/node_modules/wdio-mocha-framework/node_modules/core-js/library/modules/_export.js:35:28)
+[0m
+[0m8) test suite for <A HREF="HTTPS://IBO.BOISESTATE.EDU/BLOG/CUCKOOS2017/" TITLE="YELLOW-BILLED CUCKOO SURVEY UPDATE">YELLOW-BILLED CUCKOO SURVEY UPDATE</A> should check the mega menu:
+[0m[31mAn element could not be located on the page using the given search parameters ("#fw-mega-menu").[0m[93m
+running chrome[0m[90m
+Error: An element could not be located on the page using the given search parameters ("#fw-mega-menu").
+    at elements("#content > div.post-footer > p") - isVisible.js:54:17
+    at isVisible("#content > div.post-footer > p") - waitForVisible.js:73:22
+[0m
+
+

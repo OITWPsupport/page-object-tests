@@ -1,0 +1,18 @@
+
+Testing https://ir.boisestate.edu/surveyresults/college-of-education-survey-results/
+It took 5029 ms to load the page.
+[32m․[0m[31mF[0m[32m․[0m[32m․[0m[32m․[0m[32m․[0m[32m․[0m[32m․[0m
+
+[32m7 passing[0m[90m (7.80s)[0m
+[31m1 failing[0m
+
+[0m1) test suite for https://ir.boisestate.edu/surveyresults/college-of-education-survey-results/ should verify the URL:
+[0m[31mexpected 'https://ir.boisestate.edu/graduate-undergraduate-survey-results/college-of-education-survey-results/' to equal 'https://ir.boisestate.edu/surveyresults/college-of-education-survey-results/'[0m[93m
+running chrome[0m[90m
+AssertionError: expected 'https://ir.boisestate.edu/graduate-undergraduate-survey-results/college-of-education-survey-results/' to equal 'https://ir.boisestate.edu/surveyresults/college-of-education-survey-results/'
+    at Context.<anonymous> (/Users/david/temp/20180105/page-object-tests/test/specs/var.spec.js:33:40)
+    at new Promise (<anonymous>)
+    at new F (/usr/local/lib/node_modules/wdio-mocha-framework/node_modules/core-js/library/modules/_export.js:35:28)
+[0m
+
+

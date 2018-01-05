@@ -1,0 +1,41 @@
+
+Testing https://writingcenter.boisestate.edu/story-studio/,Story Studio 
+[31mF[0m[31mF[0mIt took 59300 ms to load the page.
+[32m․[0m[32m․[0m[31mF[0m[32m․[0m[31mF[0m[32m․[0m
+
+[32m4 passing[0m[90m (63.10s)[0m
+[31m4 failing[0m
+
+[0m1) test suite for https://writingcenter.boisestate.edu/story-studio/,Story Studio  should load the page in under 7 seconds:
+[0m[31mTimeout of 30000ms exceeded. Try to reduce the run time or increase your timeout for test specs (http://webdriver.io/guide/testrunner/timeouts.html); if returning a Promise, ensure it resolves.[0m[93m
+running chrome[0m[90m
+Error: Timeout of 30000ms exceeded. Try to reduce the run time or increase your timeout for test specs (http://webdriver.io/guide/testrunner/timeouts.html); if returning a Promise, ensure it resolves.
+    at Timeout.<anonymous> (/usr/local/lib/node_modules/wdio-mocha-framework/node_modules/mocha/lib/runnable.js:238:19)
+    at ontimeout (timers.js:466:11)
+    at tryOnTimeout (timers.js:304:5)
+    at Timer.listOnTimeout (timers.js:264:5)
+[0m
+[0m2) test suite for https://writingcenter.boisestate.edu/story-studio/,Story Studio  should verify the URL:
+[0m[31mexpected 'https://writingcenter.boisestate.edu/story-studio/,Story%20Studio' to equal 'https://writingcenter.boisestate.edu/story-studio/,Story Studio '[0m[93m
+running chrome[0m[90m
+AssertionError: expected 'https://writingcenter.boisestate.edu/story-studio/,Story%20Studio' to equal 'https://writingcenter.boisestate.edu/story-studio/,Story Studio '
+    at Context.<anonymous> (/Users/david/temp/20180105/page-object-tests/test/specs/var.spec.js:33:40)
+    at new Promise (<anonymous>)
+    at new F (/usr/local/lib/node_modules/wdio-mocha-framework/node_modules/core-js/library/modules/_export.js:35:28)
+[0m
+[0m3) test suite for https://writingcenter.boisestate.edu/story-studio/,Story Studio  should read the value of footer:
+[0m[31mAn element could not be located on the page using the given search parameters (".entry-title").[0m[93m
+running chrome[0m[90m
+Error: An element could not be located on the page using the given search parameters (".entry-title").
+    at getText() - index.js:312:3
+[0m
+[0m4) test suite for https://writingcenter.boisestate.edu/story-studio/,Story Studio  should check the title:
+[0m[31mexpected 'Page not found | Writing Center' to equal ' Writing Center,STORY STUDIO'[0m[93m
+running chrome[0m[90m
+AssertionError: expected 'Page not found | Writing Center' to equal ' Writing Center,STORY STUDIO'
+    at Context.<anonymous> (/Users/david/temp/20180105/page-object-tests/test/specs/var.spec.js:64:35)
+    at new Promise (<anonymous>)
+    at new F (/usr/local/lib/node_modules/wdio-mocha-framework/node_modules/core-js/library/modules/_export.js:35:28)
+[0m
+
+
