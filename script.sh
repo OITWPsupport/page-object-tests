@@ -37,7 +37,6 @@ do
         export URL=$url
         export TITLE=$title
         export HEADER=$header
-	# (/usr/local/bin/wdio wdio.conf.js > results/$1/$count) &
 	(./node_modules/.bin/wdio wdio.conf.js > results/$1/$count) &
 	sleep 2
 
