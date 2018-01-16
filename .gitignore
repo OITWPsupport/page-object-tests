@@ -1,0 +1,6 @@
+data/temp
+node_modules
+geckodriver
+nohup.out
+results/*
+selenium-server-standalone*
