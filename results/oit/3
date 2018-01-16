@@ -1,8 +1,14 @@
 
-Testing https://oit.boisestate.edu/accounts/accounts/group-memberships/
-It took 5366 ms to load the page.
-[32m․[0m[32m․[0m[32m․[0m[32m․[0m[32m․[0m[32m․[0m[32m․[0m[32m․[0m
-
-[32m8 passing[0m[90m (7.90s)[0m
-
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+chrome
+    at new RuntimeError (/Users/davidlentz/temp/20180116/page-object-tests/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/davidlentz/temp/20180116/page-object-tests/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/davidlentz/temp/20180116/page-object-tests/node_modules/request/request.js:186:22)
+    at Request.emit (events.js:159:13)
+    at Request.onRequestError (/Users/davidlentz/temp/20180116/page-object-tests/node_modules/request/request.js:878:8)
+    at ClientRequest.emit (events.js:164:20)
+    at Socket.socketErrorListener (_http_client.js:389:9)
+    at Socket.emit (events.js:159:13)
+    at emitErrorNT (internal/streams/destroy.js:64:8)
+    at process._tickCallback (internal/process/next_tick.js:152:19)
 
