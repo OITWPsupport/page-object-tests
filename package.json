@@ -6,7 +6,8 @@
   "scripts": {
     "test": "wdio",
     "testoit": "wdio --suite oit",
-    "testwebguide": "wdio --suite webguide"
+    "testwebguide": "echo 'webguide'",
+    "deploy": "./deployscript.sh"
   },
   "author": "",
   "license": "ISC",
