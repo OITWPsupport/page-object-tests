@@ -38,7 +38,7 @@ do
         export TITLE=$title
         export HEADER=$header
 	(./node_modules/.bin/wdio wdio.conf.js > results/$1/$count) &
-	sleep 2
+	sleep 1 
 
 done < data/temp
 
