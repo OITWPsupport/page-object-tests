@@ -4,3 +4,4 @@ geckodriver
 nohup.out
 results/*
 selenium-server-standalone*
+errorShots
