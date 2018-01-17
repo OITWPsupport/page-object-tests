@@ -13,7 +13,6 @@ var title = process.env.TITLE;
 var header = process.env.HEADER;
 
 describe('test suite for ' + testURL, function () {
-
     var path = testURL.substring(testURL.indexOf('.edu/')+4);
     ThisPage.open(path);
     console.log('Testing ' + testURL);
@@ -33,11 +32,27 @@ describe('test suite for ' + testURL, function () {
         expect(ThisPage.currentURL).to.equal(testURL);
     } );
 
+    it('should verify the link to International Admissions', function () {
+	expect(ThisPage.intl_admissions_href).to.equal('https://globaleducation.boisestate.edu/international/');
+    } );
+
+    it('should check that the search_field exists', function () {
+        expect(ThisPage.search_field).to.be.true;
+    });
+
+    it('should check that the search_all exists', function () {
+        expect(ThisPage.search_all).to.be.true;
+    });
+
+    it('should check that the search_this exists', function () {
+        expect(ThisPage.search_this).to.be.true;
+    });
+
+    it('should check that the search_toggle exists', function () {
+        expect(ThisPage.search_toggle).to.be.true;
+    });
+
     it('should confirm that the search controls are present and correct', function () {
-	expect(ThisPage.search_field).to.exist;
-	expect(ThisPage.search_all).to.exist;
-	expect(ThisPage.search_this).to.exist;
-	expect(ThisPage.search_toggle).to.exist;
 	expect(ThisPage.search_toggle_text).to.include('SEARCH ALL BOISE STATE');
 	expect(ThisPage.search_toggle_text).to.include('SEARCH THIS SECTION');
     } );
@@ -53,7 +68,10 @@ describe('test suite for ' + testURL, function () {
 	expect(ThisPage.footerDiv.getText()).to.include(ThisPage.addressString);
 	expect(ThisPage.header.getText()).to.equal(header);
 	expect(ThisPage.header.getText()).to.not.equal('The page you requested could not be found.');
-	expect(ThisPage.post_footer).to.exist;
+    });
+
+    it('should check that the nav_home exists', function () {
+        expect(ThisPage.nav_home).to.be.true;
     });
 
     it('should check for the navigation back to www.boisestate.edu', function () {
@@ -64,8 +82,11 @@ describe('test suite for ' + testURL, function () {
         expect(ThisPage.title).to.equal(title);
     });
 
-    it('should check the mega menu', function () {
-        expect(ThisPage.post_footer).to.exist;
+    it('should check that the mega menu exists', function () {
+        expect(ThisPage.mega_menu).to.be.true;
+    });
+
+    it('should check the contents of the mega menu', function () {
         expect(ThisPage.mega_menu_text).to.include('RESEARCH');
         expect(ThisPage.mega_menu_text).to.include('ADMINISTRATION');
         expect(ThisPage.mega_menu_text).to.include('ABOUT');
