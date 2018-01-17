@@ -19,6 +19,7 @@ var sociologyPage = Object.create(page, {
 	post_footer: { get: function () { return browser.isExisting('#fw-mega-menu'); } },
 	mega_menu_text: { get: function () { return browser.getText("#fw-mega-menu"); } },
 	nav_home_link: { get: function () { return browser.getAttribute('#breadcrumb_wrap .nav_home', 'href'); } },
+	intl_admissions_href: { get: function () { return browser.getAttribute('=International Admissions', 'href'); } },
 	currentURL: { get: function () { return browser.getUrl(); } },
 	search_field: { get: function () { return browser.isExisting('#q'); } },
 	search_all: { get: function () { return browser.isExisting('.all_s'); } },
