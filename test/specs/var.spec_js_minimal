@@ -1,0 +1,28 @@
+var expect = require('chai').expect;
+
+var site = process.env.SITE;
+var pageObject = '../pageobjects/all.page';
+var ThisPage = require(pageObject);
+
+//
+// These are the page-specific values to change for each new test
+//
+
+var testURL = process.env.URL;
+var title = process.env.TITLE;
+
+describe('test suite for ' + testURL, function () {
+    console.log('Testing ' + testURL);
+
+    it.only('should have the right International Admissions link', function () {
+        var startTimestamp = new Date().getTime();
+        ThisPage.open(testURL);
+	ThisPage.footerDiv.waitForVisible();
+        var endTimestamp = new Date().getTime();
+        var pageLoadTime = (endTimestamp-startTimestamp);
+        // console.log('It took ' + pageLoadTime + ' ms to load the page.');
+	// expect(pageLoadTime).to.be.below(7000);
+	expect(ThisPage.intl_admissions_href).to.equal('https://globaleducation.boisestate.edu/international/');
+    });
+
+});

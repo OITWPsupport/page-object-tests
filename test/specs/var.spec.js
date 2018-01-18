@@ -13,14 +13,16 @@ var title = process.env.TITLE;
 var header = process.env.HEADER;
 
 describe('test suite for ' + testURL, function () {
-    var path = testURL.substring(testURL.indexOf('.edu/')+4);
-    ThisPage.open(path);
-    console.log('Testing ' + testURL);
+    // This one just loads the page. If any of the test 
+    // are only'd, this one has to be, too. (It's OK to do 
+    // multiple 'it.only' statements.)
+    it.only('Loads the page', function () {
+	ThisPage.open(testURL);
+	console.log('Testing ' + testURL);
+	var startTimestamp = new Date().getTime();
+    } );
 
     it('should load the page in under 7 seconds', function () {
-	var path = testURL.substring(testURL.indexOf('.edu/')+4);
-        var startTimestamp = new Date().getTime();
-        ThisPage.open(path);
 	ThisPage.footerDiv.waitForVisible();
         var endTimestamp = new Date().getTime();
         var pageLoadTime = (endTimestamp-startTimestamp);
@@ -32,7 +34,7 @@ describe('test suite for ' + testURL, function () {
         expect(ThisPage.currentURL).to.equal(testURL);
     } );
 
-    it('should verify the link to International Admissions', function () {
+    it.only('should verify the link to International Admissions', function () {
 	expect(ThisPage.intl_admissions_href).to.equal('https://globaleducation.boisestate.edu/international/');
     } );
 
@@ -57,7 +59,7 @@ describe('test suite for ' + testURL, function () {
 	expect(ThisPage.search_toggle_text).to.include('SEARCH THIS SECTION');
     } );
 
-    it('should confirm that the theme version is correct', function () {
+    it.only('should confirm that the theme version is correct', function () {
 	expect(ThisPage.themeversion).to.equal(ThisPage.currentthemeversion);
     } );
 

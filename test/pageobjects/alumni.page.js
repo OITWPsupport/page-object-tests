@@ -16,9 +16,10 @@ var alumniPage = Object.create(page, {
 	footerDiv: { get: function () { return $('#content > div.post-footer > p'); } },
 	title: { get: function () { return browser.getTitle(); } },
 	header: { get: function () { return $('.entry-title'); } },
+        mega_menu: { get: function () { return browser.isExisting('#fw-mega-menu'); } },
+        mega_menu_text: { get: function () { return browser.getText("#fw-mega-menu"); } },
+        intl_admissions_href: { get: function () { return browser.getAttribute('=International Admissions', 'href'); } },
 	post_footer: { get: function () { return browser.isExisting('#fw-mega-menu'); } },
-	mega_menu_text: { get: function () { return browser.getText("#fw-mega-menu"); } },
-	intl_admissions_href: { get: function () { return browser.getAttribute('=International Admissions', 'href'); } },
 	nav_home: { get: function () { return browser.isExisting('#breadcrumb_wrap .nav_home'); } },
 	nav_home_link: { get: function () { return browser.getAttribute('#breadcrumb_wrap .nav_home', 'href'); } },
 	currentURL: { get: function () { return browser.getUrl(); } },
@@ -32,8 +33,8 @@ var alumniPage = Object.create(page, {
     /**
      * define or overwrite page methods
      */
-    open: { value: function(path) {
-        page.open.call(this, 'https://alumni.boisestate.edu' + path);
+    open: { value: function(url) {
+        page.open.call(this, url);
     } }
 
 });

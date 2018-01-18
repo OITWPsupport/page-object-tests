@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Export some values as environment variables; the test spec file (js)
+# will import them and use them.
 export SITE=$1
 export BROWSER=firefox
 
@@ -29,7 +31,9 @@ count=0
 rm -rf results/$SITE
 mkdir results/$SITE
 
-sort -R data/$SITE | head -n5 > data/temp
+# Randomly choose some records (pages to test) from this site's data file.
+# Change the "-n" value to the number of pages you want to test.
+sort -R data/$SITE | head -n1 > data/temp
 
 while IFS='|' read -r url title header
 do

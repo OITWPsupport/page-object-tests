@@ -31,8 +31,8 @@ var theatreartsPage = Object.create(page, {
     /**
      * define or overwrite page methods
      */
-    open: { value: function(path) {
-        page.open.call(this, 'https://theatrearts.boisestate.edu' + path);
+    open: { value: function(url) {
+        page.open.call(this, url);
     } }
 
 });

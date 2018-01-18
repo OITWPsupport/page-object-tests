@@ -32,8 +32,8 @@ var rmiPage = Object.create(page, {
     /**
      * define or overwrite page methods
      */
-    open: { value: function(path) {
-        page.open.call(this, 'https://rmi.boisestate.edu' + path);
+    open: { value: function(url) {
+        page.open.call(this, url);
     } }
 
 });

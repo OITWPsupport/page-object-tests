@@ -1,0 +1,17 @@
+
+Testing https://brc.boisestate.edu/
+F
+
+0 passing (7.00s)
+1 failing
+
+1) test suite for https://brc.boisestate.edu/ should have the right International Admissions link:
+expected 'https://admissions.boisestate.edu/international' to equal 'https://globaleducation.boisestate.edu/international/'
+running firefox
+AssertionError: expected 'https://admissions.boisestate.edu/international' to equal 'https://globaleducation.boisestate.edu/international/'
+    at Context.<anonymous> (/Users/davidlentz/temp/20180118/page-object-tests/test/specs/var.spec.js:25:43)
+    at new Promise (<anonymous>)
+    at new F (/Users/davidlentz/temp/20180118/page-object-tests/node_modules/core-js/library/modules/_export.js:35:28)
+
+
+

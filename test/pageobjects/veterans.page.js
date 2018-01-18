@@ -18,7 +18,7 @@ var veteransPage = Object.create(page, {
 	header: { get: function () { return $('.entry-title'); } },
 	post_footer: { get: function () { return browser.isExisting('#fw-mega-menu'); } },
 	mega_menu_text: { get: function () { return browser.getText("#fw-mega-menu"); } },
-	intl_admissions_href: { get: function () { return browser.getAttribute('=International Admissions', 'href'); } },
+	intl_admissions_href: { get: function () { return browser.getAttribute('a=International Admissions', 'href'); } },
 	nav_home_link: { get: function () { return browser.getAttribute('#breadcrumb_wrap .nav_home', 'href'); } },
 	currentURL: { get: function () { return browser.getUrl(); } },
 	search_field: { get: function () { return browser.isExisting('#q'); } },
@@ -31,8 +31,8 @@ var veteransPage = Object.create(page, {
     /**
      * define or overwrite page methods
      */
-    open: { value: function(path) {
-        page.open.call(this, 'https://veterans.boisestate.edu' + path);
+    open: { value: function(url) {
+        page.open.call(this, url);
     } }
 
 });
