@@ -5,3 +5,4 @@ nohup.out
 results/*
 selenium-server-standalone*
 errorShots
+tempscripts.sh
