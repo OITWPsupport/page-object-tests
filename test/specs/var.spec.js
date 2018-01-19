@@ -13,13 +13,16 @@ var title = process.env.TITLE;
 var header = process.env.HEADER;
 
 describe('test suite for ' + testURL, function () {
+
+var startTimestamp = new Date().getTime();
+
     // This one just loads the page. If any of the test 
     // are only'd, this one has to be, too. (It's OK to do 
     // multiple 'it.only' statements.)
     it.only('Loads the page', function () {
 	ThisPage.open(testURL);
 	console.log('Testing ' + testURL);
-	var startTimestamp = new Date().getTime();
+//	var startTimestamp = new Date().getTime();
     } );
 
     it('should load the page in under 7 seconds', function () {
@@ -59,7 +62,7 @@ describe('test suite for ' + testURL, function () {
 	expect(ThisPage.search_toggle_text).to.include('SEARCH THIS SECTION');
     } );
 
-    it.only('should confirm that the theme version is correct', function () {
+    it('should confirm that the theme version is correct', function () {
 	expect(ThisPage.themeversion).to.equal(ThisPage.currentthemeversion);
     } );
 

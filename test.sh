@@ -7,7 +7,7 @@ export BROWSER=firefox
 
 # Test that we got one arg, which should name the site to be tested:
 if [ $# -eq 0 ]; then
-	echo "Please name a site to be tested. Pass the site name as a script argument, like ${0} [sitename]"
+	echo "Please name a site to be tested. Pass the site name as an argument, like ${0} [sitename]"
 	exit
 fi;
 
@@ -33,7 +33,7 @@ mkdir results/$SITE
 
 # Randomly choose some records (pages to test) from this site's data file.
 # Change the "-n" value to the number of pages you want to test.
-sort -R data/$SITE | head -n1 > data/temp
+sort -R data/$SITE | head -n5 > data/temp
 
 while IFS='|' read -r url title header
 do
