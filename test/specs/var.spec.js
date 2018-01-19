@@ -19,7 +19,7 @@ var startTimestamp = new Date().getTime();
     // This one just loads the page. If any of the test 
     // are only'd, this one has to be, too. (It's OK to do 
     // multiple 'it.only' statements.)
-    it.only('Loads the page', function () {
+    it('Loads the page', function () {
 	ThisPage.open(testURL);
 	console.log('Testing ' + testURL);
 //	var startTimestamp = new Date().getTime();
@@ -37,7 +37,7 @@ var startTimestamp = new Date().getTime();
         expect(ThisPage.currentURL).to.equal(testURL);
     } );
 
-    it.only('should verify the link to International Admissions', function () {
+    it('should verify the link to International Admissions', function () {
 	expect(ThisPage.intl_admissions_href).to.equal('https://globaleducation.boisestate.edu/international/');
     } );
 
