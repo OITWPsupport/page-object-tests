@@ -26,7 +26,7 @@ var startTimestamp = new Date().getTime();
     } );
 
     it('should load the page in under 7 seconds', function () {
-	ThisPage.footerDiv.waitForVisible();
+	ThisPage.footerDiv().waitForVisible();
         var endTimestamp = new Date().getTime();
         var pageLoadTime = (endTimestamp-startTimestamp);
         console.log('It took ' + pageLoadTime + ' ms to load the page.');
@@ -34,71 +34,71 @@ var startTimestamp = new Date().getTime();
     });
 
     it('should verify the URL', function () {
-        expect(ThisPage.currentURL).to.equal(testURL);
+        expect(ThisPage.currentURL()).to.equal(testURL);
     } );
 
     it('should verify the link to International Admissions', function () {
-	expect(ThisPage.intl_admissions_href).to.equal('https://globaleducation.boisestate.edu/international/');
+	expect(ThisPage.intl_admissions_href()).to.equal('https://globaleducation.boisestate.edu/international/');
     } );
 
     it('should check that the search_field exists', function () {
-        expect(ThisPage.search_field).to.be.true;
+        expect(ThisPage.search_field()).to.be.true;
     });
 
     it('should check that the search_all exists', function () {
-        expect(ThisPage.search_all).to.be.true;
+        expect(ThisPage.search_all()).to.be.true;
     });
 
     it('should check that the search_this exists', function () {
-        expect(ThisPage.search_this).to.be.true;
+        expect(ThisPage.search_this()).to.be.true;
     });
 
     it('should check that the search_toggle exists', function () {
-        expect(ThisPage.search_toggle).to.be.true;
+        expect(ThisPage.search_toggle()).to.be.true;
     });
 
     it('should confirm that the search controls are present and correct', function () {
-	expect(ThisPage.search_toggle_text).to.include('SEARCH ALL BOISE STATE');
-	expect(ThisPage.search_toggle_text).to.include('SEARCH THIS SECTION');
+	expect(ThisPage.search_toggle_text()).to.include('SEARCH ALL BOISE STATE');
+	expect(ThisPage.search_toggle_text()).to.include('SEARCH THIS SECTION');
     } );
 
     it('should confirm that the theme version is correct', function () {
-	expect(ThisPage.themeversion).to.equal(ThisPage.currentthemeversion);
+	expect(ThisPage.themeversion()).to.equal(ThisPage.currentthemeversion);
     } );
 
     it('should read the value of footer', function () {
-	expect(ThisPage.footerDiv.getText()).to.include(ThisPage.deptNameString);
-	expect(ThisPage.footerDiv.getText()).to.include(ThisPage.phoneNumberString);
-	expect(ThisPage.footerDiv.getText()).to.include(ThisPage.emailAddressString);
-	expect(ThisPage.footerDiv.getText()).to.include(ThisPage.addressString);
-	expect(ThisPage.header.getText()).to.equal(header);
-	expect(ThisPage.header.getText()).to.not.equal('The page you requested could not be found.');
+	expect(ThisPage.footerDiv().getText()).to.include(ThisPage.deptNameString);
+	expect(ThisPage.footerDiv().getText()).to.include(ThisPage.phoneNumberString);
+	expect(ThisPage.footerDiv().getText()).to.include(ThisPage.emailAddressString);
+	expect(ThisPage.footerDiv().getText()).to.include(ThisPage.addressString);
+	expect(ThisPage.header().getText()).to.equal(header);
+	expect(ThisPage.header().getText()).to.not.equal('The page you requested could not be found.');
     });
 
     it('should check that the nav_home exists', function () {
-        expect(ThisPage.nav_home).to.be.true;
+        expect(ThisPage.nav_home()).to.be.true;
     });
 
     it('should check for the navigation back to www.boisestate.edu', function () {
-	expect(ThisPage.nav_home_link).to.equal('http://www.boisestate.edu/');
+	expect(ThisPage.nav_home_link()).to.equal('http://www.boisestate.edu/');
     });
 
     it('should check the title', function () {
-        expect(ThisPage.title).to.equal(title);
+        expect(ThisPage.title()).to.equal(title);
     });
 
     it('should check that the mega menu exists', function () {
-        expect(ThisPage.mega_menu).to.be.true;
+        expect(ThisPage.mega_menu()).to.be.true;
     });
 
     it('should check the contents of the mega menu', function () {
-        expect(ThisPage.mega_menu_text).to.include('RESEARCH');
-        expect(ThisPage.mega_menu_text).to.include('ADMINISTRATION');
-        expect(ThisPage.mega_menu_text).to.include('ABOUT');
-        expect(ThisPage.mega_menu_text).to.include('ADMISSIONS');
-        expect(ThisPage.mega_menu_text).to.include('ACADEMICS');
-        expect(ThisPage.mega_menu_text).to.include('GIVING');
-        expect(ThisPage.mega_menu_text).to.include('ALUMNI');
+        expect(ThisPage.mega_menu_text()).to.include('RESEARCH');
+        expect(ThisPage.mega_menu_text()).to.include('ADMINISTRATION');
+        expect(ThisPage.mega_menu_text()).to.include('ABOUT');
+        expect(ThisPage.mega_menu_text()).to.include('ADMISSIONS');
+        expect(ThisPage.mega_menu_text()).to.include('ACADEMICS');
+        expect(ThisPage.mega_menu_text()).to.include('GIVING');
+        expect(ThisPage.mega_menu_text()).to.include('ALUMNI');
     });
 
 });
