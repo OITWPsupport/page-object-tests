@@ -19,14 +19,14 @@ var startTimestamp = new Date().getTime();
     // This one just loads the page. If any of the test 
     // are only'd, this one has to be, too. (It's OK to do 
     // multiple 'it.only' statements.)
-    it('Loads the page', function () {
+    it.only('Loads the page', function () {
 	ThisPage.open(testURL);
 	console.log('Testing ' + testURL);
 //	var startTimestamp = new Date().getTime();
     } );
 
-    it('should load the page in under 7 seconds', function () {
-	ThisPage.footerDiv().waitForVisible();
+    it.only('should load the page in under 7 seconds', function () {
+	ThisPage.post_footerDiv().waitForVisible();
         var endTimestamp = new Date().getTime();
         var pageLoadTime = (endTimestamp-startTimestamp);
         console.log('It took ' + pageLoadTime + ' ms to load the page.');
@@ -66,11 +66,16 @@ var startTimestamp = new Date().getTime();
 	expect(ThisPage.themeversion()).to.equal(ThisPage.currentthemeversion);
     } );
 
-    it('should read the value of footer', function () {
-	expect(ThisPage.footerDiv().getText()).to.include(ThisPage.deptNameString);
-	expect(ThisPage.footerDiv().getText()).to.include(ThisPage.phoneNumberString);
-	expect(ThisPage.footerDiv().getText()).to.include(ThisPage.emailAddressString);
-	expect(ThisPage.footerDiv().getText()).to.include(ThisPage.addressString);
+    it.only('should read the value of post-footer', function () {
+	expect(ThisPage.post_footerDiv().getText()).to.include(ThisPage.deptNameString);
+	expect(ThisPage.post_footerDiv().getText()).to.include(ThisPage.phoneNumberString);
+	expect(ThisPage.post_footerDiv().getText()).to.include(ThisPage.emailAddressString);
+	expect(ThisPage.post_footerDiv().getText()).to.include(ThisPage.addressString);
+	expect(ThisPage.footerDiv().getText()).to.include('2018 Boise State University 1910 University Dr., Boise, ID 83725 (208) 426-1000');
+    } );
+
+
+    it.only('should read the value of the page header', function () {
 	expect(ThisPage.header().getText()).to.equal(header);
 	expect(ThisPage.header().getText()).to.not.equal('The page you requested could not be found.');
     });
@@ -81,6 +86,26 @@ var startTimestamp = new Date().getTime();
 
     it('should check for the navigation back to www.boisestate.edu', function () {
 	expect(ThisPage.nav_home_link()).to.equal('http://www.boisestate.edu/');
+    });
+
+    it('should check that the footer-nav exists', function () {
+        expect(ThisPage.footer_nav()).to.be.true;
+    });
+
+    it('should check that the link to myBoiseState in the global footer exists', function () {
+        expect(ThisPage.myBoiseState_footer()).to.be.true;
+    });
+
+    it('should check for the footer navigation to my.boisestate.edu', function () {
+        expect(ThisPage.myBoiseState_footer_link()).to.equal('https://my.boisestate.edu/');
+    });
+
+    it('should check that the bScoial icon in the global footer exists', function () {
+        expect(ThisPage.bSocial_footer()).to.be.true;
+    });
+
+    it('should check for the footer navigation to news.boisestate.edu/social', function () {
+        expect(ThisPage.bSocial_footer_link()).to.equal('http://news.boisestate.edu/social/');
     });
 
     it('should check the title', function () {
