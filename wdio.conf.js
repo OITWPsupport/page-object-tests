@@ -13,11 +13,12 @@ exports.config = {
         './test/specs/*.js'
     ],
     suites: {
-	carts: [
-		'./test/specs/carts/radarcart.js',
-		'./test/specs/carts/oschconcart.js',
-		'./test/specs/carts/veteranscart.js'
-	]
+	radarcart: [
+		'./test/specs/carts/radarcart.js'
+	],
+	oshconcart: [
+		'./test/specs/carts/oshconcart.js'
+	],
     },
     // Patterns to exclude.
     exclude: [

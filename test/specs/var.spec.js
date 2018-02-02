@@ -25,12 +25,12 @@ var startTimestamp = new Date().getTime();
 //	var startTimestamp = new Date().getTime();
     } );
 
-    it.only('should load the page in under 7 seconds', function () {
+    it('should load the page in under 9 seconds', function () {
 	ThisPage.post_footerDiv().waitForVisible();
         var endTimestamp = new Date().getTime();
         var pageLoadTime = (endTimestamp-startTimestamp);
         console.log('It took ' + pageLoadTime + ' ms to load the page.');
-	expect(pageLoadTime).to.be.below(7000);
+	expect(pageLoadTime).to.be.below(9000);
     });
 
     it('should verify the URL', function () {
@@ -66,7 +66,7 @@ var startTimestamp = new Date().getTime();
 	expect(ThisPage.themeversion()).to.equal(ThisPage.currentthemeversion);
     } );
 
-    it.only('should read the value of post-footer', function () {
+    it('should read the value of post-footer', function () {
 	expect(ThisPage.post_footerDiv().getText()).to.include(ThisPage.deptNameString);
 	expect(ThisPage.post_footerDiv().getText()).to.include(ThisPage.phoneNumberString);
 	expect(ThisPage.post_footerDiv().getText()).to.include(ThisPage.emailAddressString);
@@ -75,7 +75,7 @@ var startTimestamp = new Date().getTime();
     } );
 
 
-    it.only('should read the value of the page header', function () {
+    it('should read the value of the page header', function () {
 	expect(ThisPage.header().getText()).to.equal(header);
 	expect(ThisPage.header().getText()).to.not.equal('The page you requested could not be found.');
     });

@@ -1,6 +1,6 @@
 var expect = require('chai').expect;
 
-var site = 'radarcart';
+var site = 'oshconcart';
 var pageObject = '../../pageobjects/carts/' + site + '.page';
 var ThisPage = require(pageObject);
 

@@ -1,6 +1,6 @@
 var page = require('./carts_page');
 
-var radarcartPage = Object.create(page, {
+var oshconcartPage = Object.create(page, {
 
     /**
      * define elements
@@ -11,7 +11,7 @@ var radarcartPage = Object.create(page, {
 //	emailAddressString: { get: function () { return ' ACADEMIC@BOISESTATE.EDU'; } },
 //	addressString: { get: function () { return 'SMASH BUILDING, FIRST FLOOR'; } },
 	currentthemeversion: { get: function () { return '2.8.15'; } },
-        search_field: { get: function () { return browser.isExisting('//*[@id="masthead"]/div/div[2]/div/form/div/input[1]'); } },
+	search_field: { get: function () { return browser.isExisting('#woocommerce-product-search-field-0'); } },
 });
 
-module.exports = radarcartPage;
+module.exports = oshconcartPage;
