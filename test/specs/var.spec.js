@@ -25,7 +25,7 @@ var startTimestamp = new Date().getTime();
 //	var startTimestamp = new Date().getTime();
     } );
 
-    it('should load the page in under 9 seconds', function () {
+    it.only('should load the page in under 9 seconds', function () {
 	ThisPage.post_footerDiv().waitForVisible();
         var endTimestamp = new Date().getTime();
         var pageLoadTime = (endTimestamp-startTimestamp);
@@ -33,7 +33,7 @@ var startTimestamp = new Date().getTime();
 	expect(pageLoadTime).to.be.below(9000);
     });
 
-    it('should verify the URL', function () {
+    it.only('should verify the URL', function () {
         expect(ThisPage.currentURL()).to.equal(testURL);
     } );
 
@@ -62,20 +62,20 @@ var startTimestamp = new Date().getTime();
 	expect(ThisPage.search_toggle_text()).to.include('SEARCH THIS SECTION');
     } );
 
-    it('should confirm that the theme version is correct', function () {
+    it.only('should confirm that the theme version is correct', function () {
 	expect(ThisPage.themeversion()).to.equal(ThisPage.currentthemeversion);
     } );
 
-    it('should read the value of post-footer', function () {
+    it.only('should read the value of post-footer', function () {
 	expect(ThisPage.post_footerDiv().getText()).to.include(ThisPage.deptNameString);
 	expect(ThisPage.post_footerDiv().getText()).to.include(ThisPage.phoneNumberString);
-	expect(ThisPage.post_footerDiv().getText()).to.include(ThisPage.emailAddressString);
+	// expect(ThisPage.post_footerDiv().getText()).to.include(ThisPage.emailAddressString);
 	expect(ThisPage.post_footerDiv().getText()).to.include(ThisPage.addressString);
 	expect(ThisPage.footerDiv().getText()).to.include('2018 Boise State University 1910 University Dr., Boise, ID 83725 (208) 426-1000');
     } );
 
 
-    it('should read the value of the page header', function () {
+    it.only('should read the value of the page header', function () {
 	expect(ThisPage.header().getText()).to.equal(header);
 	expect(ThisPage.header().getText()).to.not.equal('The page you requested could not be found.');
     });
@@ -108,7 +108,7 @@ var startTimestamp = new Date().getTime();
         expect(ThisPage.bSocial_footer_link()).to.equal('http://news.boisestate.edu/social/');
     });
 
-    it('should check the title', function () {
+    it.only('should check the title', function () {
         expect(ThisPage.title()).to.equal(title);
     });
 
