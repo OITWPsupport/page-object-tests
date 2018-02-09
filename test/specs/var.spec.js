@@ -108,7 +108,7 @@ var startTimestamp = new Date().getTime();
         expect(ThisPage.bSocial_footer_link()).to.equal('http://news.boisestate.edu/social/');
     });
 
-    it.only('should check the title', function () {
+    it('should check the title', function () {
         expect(ThisPage.title()).to.equal(title);
     });
 
